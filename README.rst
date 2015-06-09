@@ -31,6 +31,12 @@ Get some tweets::
 	for item in r:
 		print item
 
+Get retweets of a tweet::
+
+	r = api.request('statuses/retweets/:509457288717819904', {'count': 5})
+	for item in r:
+		print item
+
 Stream tweets from New York City::
 
 	r = api.request('statuses/filter', {'locations':'-74,40,-73,41'})
